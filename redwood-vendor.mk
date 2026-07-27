@@ -434,6 +434,7 @@ PRODUCT_PACKAGES += \
     libC2D2 \
     libCB \
     libOpenCL \
+    libVkLayer_q3dtools \
     libadreno_utils \
     libc2d30_bltlib \
     libcapiv2svacnn \
@@ -448,6 +449,7 @@ PRODUCT_PACKAGES += \
     libdsutils \
     libfastcvdsp_stub \
     libfastcvopt \
+    libgpudataproducer \
     libgsl \
     libidl \
     libllvm-glnext \
