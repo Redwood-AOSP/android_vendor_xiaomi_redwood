@@ -696,6 +696,11 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.uceservice@2.2 \
     com.qualcomm.qti.uceservice@2.3 \
     deviceInfoServiceModuleNr \
+    s53adreno_utils \
+    v86adreno_app_profiles \
+    v86adreno_utils \
+    v88adreno_utils \
+    vendor.qti.qspmhal@1.0 \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.gatekeeper@1.0-impl-qti \
     camera.qcom \
