@@ -12,6 +12,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/redwood/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
     vendor/xiaomi/redwood/proprietary/system_ext/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/wfdservice.rc \
     vendor/xiaomi/redwood/proprietary/system_ext/etc/permissions/audiosphere.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/audiosphere.xml \
+    vendor/xiaomi/redwood/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/xiaomi/redwood/proprietary/system_ext/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.dpmframework.xml \
     vendor/xiaomi/redwood/proprietary/system_ext/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/dpmapi.xml \
     vendor/xiaomi/redwood/proprietary/system_ext/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qcrilhook.xml \
@@ -559,6 +560,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifidisplaysession@1.0_vendor \
     vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl \
     libxlog \
+    adrenoutils_extra \
     android.hardware.secure_element@1.0-impl \
     com.qti.actuator.redwood_sunny_s5khm2sd_dw9800_wide \
     com.qti.eeprom.redwood_aac_ov02b10_p24c64f_macro_eeprom \
@@ -695,6 +697,8 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.uceservice@2.2 \
     com.qualcomm.qti.uceservice@2.3 \
     deviceInfoServiceModuleNr \
+    v86adreno_app_profiles \
+    vendor.qti.qspmhal@1.0 \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.gatekeeper@1.0-impl-qti \
     camera.qcom \
@@ -731,12 +735,14 @@ PRODUCT_PACKAGES += \
     libGPreqcancel \
     libGPreqcancel_svc \
     libI420colorconvert \
+    libOpenCL_adreno \
     libQSEEComAPI \
     libQTEEConnector_vendor \
     libQnnHtpAltPrepStub \
     libQnnHtpStub \
     libSNPE \
     libXMFaceFocus \
+    libadreno_compiler_cl \
     libadsp_default_listener \
     libadsprpc \
     libaidenoiser \
@@ -814,6 +820,7 @@ PRODUCT_PACKAGES += \
     libgf_ca \
     libgf_hal \
     libgoodixhwfingerprint \
+    libgpu_tonemapper \
     libhdr_tm \
     libhta \
     libhydra_common \
@@ -823,6 +830,8 @@ PRODUCT_PACKAGES += \
     libizat_core \
     libjnihelper \
     libjpege \
+    libkcl \
+    libkernelmanager \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
@@ -971,10 +980,16 @@ PRODUCT_PACKAGES += \
     libxtadapter \
     ls_nq_client \
     libwvdrmengine \
+    notadreno_utils \
+    notdmabufheap \
+    notgsl \
+    notllvm-glnext \
+    notllvm-qgl \
     qcrilMarshal \
     qcrild_libqcrilnrutils \
     qtiril-utils \
     qtiwakelock \
+    s53adreno_utils \
     se_nq_extn_client \
     sensors.mius.proximity \
     sensors.ssc \
@@ -982,6 +997,8 @@ PRODUCT_PACKAGES += \
     unnhal-acc-common \
     unnhal-acc-gpu \
     unnhal-acc-htp \
+    v86adreno_utils \
+    v88adreno_utils \
     vendor.display.color@1.0 \
     vendor.display.color@1.1 \
     vendor.display.color@1.2 \
@@ -1161,6 +1178,8 @@ PRODUCT_PACKAGES += \
     IWlanService \
     SoterService \
     TimeService \
+    HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND \
+    HotwordEnrollmentXGoogleHEXAGON_WIDEBAND \
     PowerOffAlarm \
     QtiTelephonyService \
     WfdService \
@@ -1170,6 +1189,7 @@ PRODUCT_PACKAGES += \
     WfdCommon \
     tcmclient \
     audiosphere \
+    com.android.hotwordenrollment.common.util \
     com.qti.dpmframework \
     dpmapi \
     qcrilhook \
