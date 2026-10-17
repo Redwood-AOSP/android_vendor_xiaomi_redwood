@@ -458,17 +458,19 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcutils",
                 "liblog",
-                "libgsl",
+                "notgsl",
                 "libutils",
+                "v86adreno_utils",
                 "libnativewindow",
                 "libvndksupport",
                 "libgralloc.qti",
                 "libgralloctypes",
                 "vendor.qti.hardware.display.mapper@4.0",
                 "android.hardware.graphics.mapper@4.0",
-                "vendor.qti.hardware.display.mapperextensions@1.0",
                 "vendor.qti.hardware.display.mapperextensions@1.1",
                 "libhidlbase",
+                "vendor.qti.hardware.display.mapper@3.0",
+                "android.hardware.graphics.mapper@3.0",
                 "libc++",
                 "libc",
                 "libm",
@@ -1256,6 +1258,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libllvm-qcom.so",
             ],
             shared_libs: [
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -10666,33 +10669,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "s53adreno_utils",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/egl/s53adreno_utils.so",
-            ],
-            shared_libs: [
-                "notgsl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    relative_install_path: "egl",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "v86adreno_app_profiles",
     owner: "xiaomi",
     strip: {
@@ -10717,59 +10693,6 @@ cc_prebuilt_library_shared {
                 "libc++",
                 "libc",
                 "libm",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    relative_install_path: "egl",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "v86adreno_utils",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/egl/v86adreno_utils.so",
-            ],
-            shared_libs: [
-                "libdl",
-                "liblog",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    relative_install_path: "egl",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "v88adreno_utils",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/egl/v88adreno_utils.so",
-            ],
-            shared_libs: [
-                "notgsl",
-                "liblog",
-                "libnativewindow",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
             ],
         },
     },
@@ -12139,6 +12062,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libOpenCL_adreno",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libOpenCL_adreno.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libvndksupport",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libQSEEComAPI",
     owner: "xiaomi",
     strip: {
@@ -12292,6 +12243,32 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libadreno_compiler_cl",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libadreno_compiler_cl.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -14976,6 +14953,56 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libkcl",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libkcl.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libkernelmanager",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libkernelmanager.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -19735,6 +19762,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "s53adreno_utils",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/s53adreno_utils.so",
+            ],
+            shared_libs: [
+                "notgsl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "se_nq_extn_client",
     owner: "xiaomi",
     strip: {
@@ -19978,6 +20031,57 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "v86adreno_utils",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/v86adreno_utils.so",
+            ],
+            shared_libs: [
+                "libdl",
+                "liblog",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "v88adreno_utils",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/v88adreno_utils.so",
+            ],
+            shared_libs: [
+                "notgsl",
+                "liblog",
+                "libnativewindow",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }

@@ -696,10 +696,7 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.uceservice@2.2 \
     com.qualcomm.qti.uceservice@2.3 \
     deviceInfoServiceModuleNr \
-    s53adreno_utils \
     v86adreno_app_profiles \
-    v86adreno_utils \
-    v88adreno_utils \
     vendor.qti.qspmhal@1.0 \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.gatekeeper@1.0-impl-qti \
@@ -737,12 +734,14 @@ PRODUCT_PACKAGES += \
     libGPreqcancel \
     libGPreqcancel_svc \
     libI420colorconvert \
+    libOpenCL_adreno \
     libQSEEComAPI \
     libQTEEConnector_vendor \
     libQnnHtpAltPrepStub \
     libQnnHtpStub \
     libSNPE \
     libXMFaceFocus \
+    libadreno_compiler_cl \
     libadsp_default_listener \
     libadsprpc \
     libaidenoiser \
@@ -829,6 +828,8 @@ PRODUCT_PACKAGES += \
     libizat_core \
     libjnihelper \
     libjpege \
+    libkcl \
+    libkernelmanager \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
@@ -986,6 +987,7 @@ PRODUCT_PACKAGES += \
     qcrild_libqcrilnrutils \
     qtiril-utils \
     qtiwakelock \
+    s53adreno_utils \
     se_nq_extn_client \
     sensors.mius.proximity \
     sensors.ssc \
@@ -993,6 +995,8 @@ PRODUCT_PACKAGES += \
     unnhal-acc-common \
     unnhal-acc-gpu \
     unnhal-acc-htp \
+    v86adreno_utils \
+    v88adreno_utils \
     vendor.display.color@1.0 \
     vendor.display.color@1.1 \
     vendor.display.color@1.2 \
