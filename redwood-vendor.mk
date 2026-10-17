@@ -819,6 +819,7 @@ PRODUCT_PACKAGES += \
     libgf_ca \
     libgf_hal \
     libgoodixhwfingerprint \
+    libgpu_tonemapper \
     libhdr_tm \
     libhta \
     libhydra_common \
